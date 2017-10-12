@@ -13,6 +13,8 @@ source:
     - https://cran.r-project.org/src/contrib/igraph_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/igraph/igraph_{{ version }}.tar.gz
   sha256: 89b16b41bc77949ea208419e52a18b78b5d418c7fedc52cd47d06a51a6e746ec
+
+
   patches:
     - 0001-Change-GraphML-namespace-fprintf-calls-to-use-format.patch
 
@@ -38,8 +40,6 @@ requirements:
     - {{posix}}automake
     - {{posix}}pkg-config
     - {{posix}}make
-    - {{native}}gmp
-    - {{native}}libxml2
     - r-matrix
     - r-irlba
     - r-magrittr
@@ -48,8 +48,6 @@ requirements:
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
-    - {{native}}gmp
-    - {{native}}libxml2
     - r-matrix
     - r-irlba
     - r-magrittr

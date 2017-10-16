@@ -37,10 +37,14 @@ requirements:
     - {{native}}toolchain        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}autoconf
+    - {{posix}}grep              # [win]
+    - {{posix}}sed               # [win]
     - {{posix}}automake-wrapper  # [win]
     - {{posix}}automake          # [not win]
     - {{posix}}pkg-config
     - {{posix}}make
+    - {{native}}gmp
+    - {{native}}libxml2
     - r-matrix
     - r-irlba
     - r-magrittr
@@ -49,6 +53,8 @@ requirements:
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
+    - {{native}}gmp
+    - {{native}}libxml2
     - r-matrix
     - r-irlba
     - r-magrittr

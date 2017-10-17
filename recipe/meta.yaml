@@ -17,6 +17,7 @@ source:
 
   patches:
     - 0001-Change-GraphML-namespace-fprintf-calls-to-use-format.patch
+    - 0002-Define-graphml-namespace-URI-unconditionally.patch
 
 build:
   # If this is a new build for the same version, increment the build number.

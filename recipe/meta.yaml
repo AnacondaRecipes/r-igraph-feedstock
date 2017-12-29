@@ -37,29 +37,29 @@ requirements:
     - {{ compiler('fortran') }}  # [not win]
     - {{native}}toolchain        # [win]
     - {{posix}}filesystem        # [win]
-    - {{posix}}autoconf
-    - {{posix}}grep              # [win]
     - {{posix}}sed               # [win]
+    - {{posix}}grep              # [win]
+    - {{posix}}autoconf
     - {{posix}}automake-wrapper  # [win]
     - {{posix}}automake          # [not win]
     - {{posix}}pkg-config
     - {{posix}}make
-    - {{native}}gmp
-    - {{native}}libxml2
     - r-matrix
     - r-irlba
     - r-magrittr
     - r-pkgconfig >=2.0.0
+    - {{native}}gmp
+    - {{native}}libxml2
 
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
-    - {{native}}gmp
-    - {{native}}libxml2
     - r-matrix
     - r-irlba
     - r-magrittr
     - r-pkgconfig >=2.0.0
+    - {{native}}gmp
+    - {{native}}libxml2
 
 test:
   commands:

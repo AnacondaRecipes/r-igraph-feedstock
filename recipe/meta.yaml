@@ -47,7 +47,6 @@ requirements:
   host:
     - r-base
     - r-matrix
-    - r-irlba
     - r-magrittr
     - r-pkgconfig >=2.0.0
     - {{native}}gmp
@@ -57,7 +56,6 @@ requirements:
     - r-base
     - {{native}}gcc-libs         # [win]
     - r-matrix
-    - r-irlba
     - r-magrittr
     - r-pkgconfig >=2.0.0
     - {{native}}gmp

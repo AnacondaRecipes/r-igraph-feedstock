@@ -1,4 +1,4 @@
-{% set version = '1.1.2' %}
+{% set version = '1.2.1' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,8 +12,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/igraph_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/igraph/igraph_{{ version }}.tar.gz
-  sha256: 89b16b41bc77949ea208419e52a18b78b5d418c7fedc52cd47d06a51a6e746ec
-
+  sha256: 55341848f85a436c32d60f59a4db485238d535f2e8afe0d5a360804fc33299c1
 
   patches:
     - 0001-Change-GraphML-namespace-fprintf-calls-to-use-format.patch
@@ -24,13 +23,12 @@ build:
   # If this is a new build for the same version, increment the build number.
   number: 0
 
-
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
 
-# Suggests: ape, graph, igraphdata, NMF, rgl, scales, stats4, tcltk, testthat
+# Suggests: ape, graph, igraphdata, rgl, scales, stats4, tcltk, testthat
 requirements:
   build:
     - {{ compiler('c') }}        # [not win]
@@ -94,24 +92,24 @@ extra:
 # The original CRAN metadata for this package was:
 
 # Package: igraph
-# Version: 1.1.2
+# Version: 1.2.1
 # Title: Network Analysis and Visualization
 # Author: See AUTHORS file.
 # Maintainer: Gabor Csardi <csardi.gabor@gmail.com>
 # Description: Routines for simple graphs and network analysis. It can handle large graphs very well and provides functions for generating random and regular graphs, graph visualization, centrality methods and much more.
 # Depends: methods
-# Imports: graphics, grDevices, irlba, magrittr, Matrix, pkgconfig (>= 2.0.0), stats, utils
-# Suggests: ape, graph, igraphdata, NMF, rgl, scales, stats4, tcltk, testthat
+# Imports: graphics, grDevices, magrittr, Matrix, pkgconfig (>= 2.0.0), stats, utils
+# Suggests: ape, graph, igraphdata, rgl, scales, stats4, tcltk, testthat
 # License: GPL (>= 2)
 # URL: http://igraph.org
-# SystemRequirements: gmp, libxml2
+# SystemRequirements: gmp (optional), libxml2 (optional), glpk (optional)
 # BugReports: https://github.com/igraph/igraph/issues
 # Encoding: UTF-8
-# Collate: 'adjacency.R' 'auto.R' 'assortativity.R' 'attributes.R' 'basic.R' 'bipartite.R' 'centrality.R' 'centralization.R' 'cliques.R' 'cocitation.R' 'cohesive.blocks.R' 'community.R' 'components.R' 'console.R' 'conversion.R' 'data_frame.R' 'decomposition.R' 'degseq.R' 'demo.R' 'embedding.R' 'epi.R' 'fit.R' 'flow.R' 'foreign.R' 'games.R' 'glet.R' 'hrg.R' 'igraph-package.R' 'incidence.R' 'indexing.R' 'interface.R' 'iterators.R' 'layout.R' 'layout_drl.R' 'lazyeval.R' 'make.R' 'mgclust.R' 'minimum.spanning.tree.R' 'motifs.R' 'nexus.R' 'operators.R' 'other.R' 'package.R' 'palette.R' 'par.R' 'paths.R' 'plot.R' 'plot.common.R' 'plot.shapes.R' 'pp.R' 'print.R' 'printr.R' 'random_walk.R' 'rewire.R' 'scan.R' 'scg.R' 'sgm.R' 'similarity.R' 'simple.R' 'sir.R' 'socnet.R' 'sparsedf.R' 'structural.properties.R' 'structure.info.R' 'test.R' 'tkplot.R' 'topology.R' 'triangles.R' 'utils.R' 'uuid.R' 'versions.R' 'weakref.R' 'zzz-deprecate.R'
+# Collate: 'adjacency.R' 'auto.R' 'assortativity.R' 'attributes.R' 'basic.R' 'bipartite.R' 'centrality.R' 'centralization.R' 'cliques.R' 'cocitation.R' 'cohesive.blocks.R' 'community.R' 'components.R' 'console.R' 'conversion.R' 'data_frame.R' 'decomposition.R' 'degseq.R' 'demo.R' 'embedding.R' 'epi.R' 'fit.R' 'flow.R' 'foreign.R' 'games.R' 'glet.R' 'hrg.R' 'igraph-package.R' 'incidence.R' 'indexing.R' 'interface.R' 'iterators.R' 'layout.R' 'layout_drl.R' 'lazyeval.R' 'make.R' 'minimum.spanning.tree.R' 'motifs.R' 'nexus.R' 'operators.R' 'other.R' 'package.R' 'palette.R' 'par.R' 'paths.R' 'plot.R' 'plot.common.R' 'plot.shapes.R' 'pp.R' 'print.R' 'printr.R' 'random_walk.R' 'rewire.R' 'scan.R' 'scg.R' 'sgm.R' 'similarity.R' 'simple.R' 'sir.R' 'socnet.R' 'sparsedf.R' 'structural.properties.R' 'structure.info.R' 'test.R' 'tkplot.R' 'topology.R' 'triangles.R' 'utils.R' 'uuid.R' 'versions.R' 'weakref.R' 'zzz-deprecate.R'
 # NeedsCompilation: yes
-# Packaged: 2017-07-20 21:33:52 UTC; gaborcsardi
+# Packaged: 2018-03-10 12:30:48 UTC; gaborcsardi
 # Repository: CRAN
-# Date/Publication: 2017-07-21 11:39:40 UTC
+# Date/Publication: 2018-03-10 21:33:20 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for

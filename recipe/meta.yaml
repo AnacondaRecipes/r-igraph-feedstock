@@ -56,6 +56,7 @@ requirements:
     - r-pkgconfig >=2.0.0
     - {{native}}gmp
     - {{native}}libxml2
+    - libopenblas                # [osx]
 
 test:
   commands:
